@@ -1,0 +1,207 @@
+[
+  {
+    "role": "Machine Learning Engineer",
+    "company": "ITMO University",
+    "location": "Saint Petersburg, Russia",
+    "period": "Mar 2024 - Present",
+    "summary": "Working on adaptive LLM systems and agentic AI tools for real-world developer and analytics workflows.",
+    "techStack": [
+      "Python",
+      "vLLM",
+      "LangGraph",
+      "FastAPI",
+      "Django",
+      "Whisper",
+      "Qwen2.5",
+      "ChromaDB",
+      "Playwright"
+    ],
+    "highlights": [
+      "Designed and deployed multi-LLM serving with vLLM for autocomplete, fill-in-the-middle, and chat.",
+      "Built a VSCode plugin with completion, refactoring, chat, docstring generation, and personalized RAG.",
+      "Published 2 papers in ASE 2025 and filed a patent on adaptive suggestion systems.",
+      "Developed a voice + text data visualization assistant using Django, FastAPI, Whisper, Qwen2.5, and Coqui TTS.",
+      "Published a research paper at ICDM 2025.",
+      "Built and tested prototype web agents for robust multi-step website navigation and extraction."
+    ],
+    "galleryTitle": "ITMO Project Album",
+    "galleryFolder": "assets/pics_itmo",
+    "gallery": [
+      {
+        "src": "assets/pics_itmo/1.png",
+        "alt": "ITMO work snapshot 1",
+        "caption": "ITMO project snapshot 1"
+      },
+      {
+        "src": "assets/pics_itmo/2.png",
+        "alt": "ITMO work snapshot 2",
+        "caption": "ITMO project snapshot 2"
+      },
+      {
+        "src": "assets/pics_itmo/3.png",
+        "alt": "ITMO work snapshot 3",
+        "caption": "ITMO project snapshot 3"
+      },
+      {
+        "src": "assets/pics_itmo/4.png",
+        "alt": "ITMO work snapshot 4",
+        "caption": "ITMO project snapshot 4"
+      },
+      {
+        "src": "assets/pics_itmo/5.png",
+        "alt": "ITMO work snapshot 5",
+        "caption": "ITMO project snapshot 5"
+      },
+      {
+        "src": "assets/pics_itmo/6.png",
+        "alt": "ITMO work snapshot 6",
+        "caption": "ITMO project snapshot 6"
+      },
+      {
+        "src": "assets/pics_itmo/7.png",
+        "alt": "ITMO work snapshot 7",
+        "caption": "ITMO project snapshot 7"
+      },
+      {
+        "src": "assets/pics_itmo/8.png",
+        "alt": "ITMO work snapshot 8",
+        "caption": "ITMO project snapshot 8"
+      },
+      {
+        "src": "assets/pics_itmo/9.png",
+        "alt": "ITMO work snapshot 9",
+        "caption": "ITMO project snapshot 9"
+      },
+      {
+        "src": "assets/pics_itmo/77.png",
+        "alt": "ITMO work snapshot 10",
+        "caption": "ITMO project snapshot 10"
+      },
+      {
+        "src": "assets/pics_itmo/88.png",
+        "alt": "ITMO work snapshot 11",
+        "caption": "ITMO project snapshot 11"
+      },
+      {
+        "src": "assets/pics_itmo/99.png",
+        "alt": "ITMO work snapshot 12",
+        "caption": "ITMO project snapshot 12"
+      }
+    ],
+    "demos": [
+      {
+        "name": "Demo 1",
+        "url": "https://www.youtube.com/watch?v=u90Vz1ZboQg"
+      },
+      {
+        "name": "Demo 2",
+        "url": "https://www.youtube.com/watch?v=IOKSY575hRc"
+      }
+    ]
+  },
+  {
+    "role": "Software Engineer",
+    "company": "ViShare Technology",
+    "location": "China",
+    "period": "Jun 2023 - Apr 2024",
+    "summary": "Contributed to wireless video streaming products with a focus on optimization, testing automation, and reliable integration.",
+    "techStack": [
+      "C/C++",
+      "Vitis HLS",
+      "Profiling",
+      "Automation",
+      "Embedded Video Systems"
+    ],
+    "highlights": [
+      "Integrated team solutions into wireless video streaming products.",
+      "Modeled and optimized algorithms for performance and reliability.",
+      "Developed profiling tools that improved speed by 10x.",
+      "Automated testing workflows and ported high-level synthesis with Vitis HLS."
+    ],
+    "galleryTitle": "ViShare Work Album",
+    "galleryFolder": "assets/pics_vishare",
+    "gallery": []
+  },
+  {
+    "role": "Machine Learning Researcher",
+    "company": "Higher Institute for Applied Sciences and Technology",
+    "location": "Syria",
+    "period": "Jan 2022 - Sep 2022",
+    "summary": "Led applied computer-vision R&D for edge deployment in surveillance contexts.",
+    "techStack": [
+      "Python",
+      "Computer Vision",
+      "Edge AI",
+      "NPU Deployment",
+      "Flutter"
+    ],
+    "highlights": [
+      "Led end-to-end development of a license plate recognition system.",
+      "Improved model accuracy from 68% to 79%.",
+      "Deployed detector apps on NPU-powered edge devices with IP camera support.",
+      "Developed a Flutter app for live monitoring and archive browsing."
+    ],
+    "galleryTitle": "HIAST Project Album",
+    "galleryFolder": "assets/pics_hiast",
+    "gallery": [
+      {
+        "src": "assets/pics_hiast/1704879326265.jpeg",
+        "alt": "HIAST work snapshot 1",
+        "caption": "HIAST project snapshot 1"
+      },
+      {
+        "src": "assets/pics_hiast/1704879351147.jpeg",
+        "alt": "HIAST work snapshot 2",
+        "caption": "HIAST project snapshot 2"
+      },
+      {
+        "src": "assets/pics_hiast/1704879368706.jpeg",
+        "alt": "HIAST work snapshot 3",
+        "caption": "HIAST project snapshot 3"
+      }
+    ],
+    "demos": [
+      {
+        "name": "Demo",
+        "url": "https://youtu.be/NBYmAIW1dEA"
+      }
+    ]
+  },
+  {
+    "role": "Coach",
+    "company": "ICPC - International Collegiate Programming Contest",
+    "location": "Global",
+    "period": "Sep 2019 - Jul 2022",
+    "summary": "Mentored teams in algorithms and contest strategy, with a strong focus on consistency and growth.",
+    "techStack": [
+      "Algorithms",
+      "Data Structures",
+      "C++",
+      "Problem Solving",
+      "Team Coaching"
+    ],
+    "highlights": [
+      "Trained and mentored students in algorithms, data structures, and programming.",
+      "Recognized with Extreme Programmers Award and Steadfast Gurus Award."
+    ],
+    "galleryTitle": "ICPC Coaching Album",
+    "galleryFolder": "assets/pics_icpc",
+    "gallery": [
+      {
+        "src": "assets/pics_icpc/Screenshot 2026-02-09 224510.png",
+        "alt": "ICPC work snapshot 1",
+        "caption": "ICPC project snapshot 1"
+      },
+      {
+        "src": "assets/pics_icpc/Screenshot 2026-02-09 230655.png",
+        "alt": "ICPC work snapshot 2",
+        "caption": "ICPC project snapshot 2"
+      },
+      {
+        "src": "assets/pics_icpc/Screenshot 2026-02-09 230738.png",
+        "alt": "ICPC work snapshot 3",
+        "caption": "ICPC project snapshot 3"
+      }
+    ]
+  }
+]

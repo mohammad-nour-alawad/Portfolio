@@ -1,0 +1,76 @@
+{
+  "bio": "PhD student and Machine Learning Engineer focused on adaptive LLM systems, agentic AI, and large-scale data-driven R&D. I combine academic research with hands-on engineering for production-grade AI products.",
+  "hobbies": [
+    {
+      "name": "Competitive programming",
+      "description": "I enjoy solving algorithmic problems and keeping my problem-solving speed sharp.",
+      "links": [
+        {
+          "name": "CodeChef",
+          "url": "https://www.codechef.com/users/jogn123"
+        },
+        {
+          "name": "HackerRank",
+          "url": "https://www.hackerrank.com/profile/mohammadnour1"
+        },
+        {
+          "name": "LeetCode",
+          "url": "https://leetcode.com/u/mohammad_nour_/"
+        },
+        {
+          "name": "ICPC",
+          "url": "https://icpc.global/ICPCID/97KMPSV9DM6F"
+        }
+      ],
+      "image": "assets/Screenshot 2026-02-09 224510.png",
+      "imageAlt": "Competitive programming profile screenshot"
+    },
+    {
+      "name": "Chess",
+      "description": "I like strategic thinking and long-term planning under pressure.",
+      "links": [
+        {
+          "name": "Chess.com",
+          "url": "https://www.chess.com/member/mohammadnouralawad1"
+        }
+      ]
+    },
+    {
+      "name": "Vibe coding",
+      "description": "I like rapid prototyping and turning rough ideas into working demos quickly."
+    },
+    {
+      "name": "Ping pong",
+      "description": "It helps me stay active and clear my mind after focused technical work."
+    },
+    {
+      "name": "Ice skating",
+      "description": "I enjoy the balance and rhythm; it is a fun way to reset and recharge, even if gravity occasionally wins."
+    }
+  ],
+  "skills": [
+    "Python",
+    "Machine Learning Research",
+    "Large Language Models (LLMs)",
+    "Agentic AI Systems",
+    "LLM Evaluation and Benchmarking",
+    "Experiment Design and Ablation Studies",
+    "Prompt Engineering",
+    "RAG",
+    "LangGraph",
+    "vLLM Inference Serving",
+    "Data Curation and Web-Scale Scraping",
+    "Scientific Writing and Peer Review",
+    "FastAPI",
+    "Django",
+    "TypeScript",
+    "Linux",
+    "PyTorch",
+    "TensorFlow"
+  ],
+  "languages": [
+    "Arabic (Native)",
+    "English (C2)",
+    "Russian (B2)"
+  ]
+}

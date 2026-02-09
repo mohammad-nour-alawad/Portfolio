@@ -1,0 +1,33 @@
+[
+  {
+    "degree": "PhD",
+    "institution": "ITMO National Research University",
+    "field": "Large Language Models for Human-Centered AI",
+    "year": "2028 (Expected)",
+    "description": "Current PhD research focused on adaptive LLM systems and human-centered AI."
+  },
+  {
+    "degree": "Master's Degree",
+    "institution": "ITMO National Research University",
+    "field": "Big Data and Machine Learning",
+    "year": "2025",
+    "description": "Graduated with 5/5 GPA, ranked #1, and awarded a red diploma."
+  },
+  {
+    "degree": "Bachelor's Degree",
+    "institution": "Higher Institute of Applied Sciences and Technology",
+    "field": "Software Engineering",
+    "year": "2022",
+    "description": "Valedictorian graduate award with an excellence rate of 86.17%.",
+    "image": "assets/1748914545968.jpeg",
+    "imageAlt": "HIAST rank during studies",
+    "imageCaption": "Rank during studies at HIAST"
+  },
+  {
+    "degree": "High School Degree",
+    "institution": "National Centre for the Distinguished",
+    "field": "Distinguished Individuals Program",
+    "year": "2017",
+    "description": "Completed a selective program for distinguished students."
+  }
+]
