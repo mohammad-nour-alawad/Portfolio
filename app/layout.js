@@ -4,11 +4,12 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Mohammad Nour Al Awad | Machine Learning Engineer",
+  title: "Mohammad Nour Al Awad | Researcher & Machine Learning Engineer",
   description:
-    "Machine Learning Engineer and PhD student researching adaptive Human-AI collaboration through agentic systems, coding agents, and developer personalization.",
+    "Researcher, Machine Learning Engineer, and PhD student working on adaptive Human-AI collaboration, coding agents, and developer personalization.",
   keywords: [
     "Mohammad Nour Al Awad",
+    "AI Researcher",
     "Machine Learning Engineer",
     "Human-AI Collaboration",
     "Coding Agents",
@@ -28,7 +29,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mohammad Nour Al Awad | Portfolio",
-    description: "Machine Learning Engineer and PhD student researching adaptive Human-AI collaboration via agentic systems."
+    description: "Researcher and Machine Learning Engineer studying adaptive Human-AI collaboration via agentic systems."
   },
   alternates: {
     canonical: "/"

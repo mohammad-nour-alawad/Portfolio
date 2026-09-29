@@ -1,6 +1,6 @@
 {
-  "bio": "My research focuses on Adaptive Human-AI Collaboration via Agentic Systems. I work across Human-AI collaboration, coding agents, developer personalization, context and memory, repository-level agents, adaptive LLM assistance, agent evaluation, model orchestration, and efficient LLM systems. At ITMO, I combine research direction and publications with hands-on system architecture, implementation, infrastructure, experimentation, and evaluation.",
-  "supervision": "Supervising 8 master's students at ITMO University on research topics related to coding agents, LLM systems, adaptive context and memory, model routing, RAG, agent evaluation, and AI-assisted software engineering.",
+  "bio": "My research focuses on Adaptive Human-AI Collaboration via Agentic Systems. I work across Human-AI collaboration, coding agents, developer personalization, context and memory, knowledge graphs, repository-level agents, adaptive LLM assistance, agent evaluation, model orchestration, and efficient LLM systems. At ITMO, I combine research direction and publications with hands-on system architecture, implementation, infrastructure, experimentation, and evaluation.",
+  "supervision": "I also supervise students at ITMO.",
   "hobbies": [
     {
       "name": "Competitive programming",
@@ -61,6 +61,8 @@
     "Prompt Engineering",
     "RAG",
     "Context and Memory Management",
+    "Knowledge Graphs",
+    "Neo4j",
     "Model Routing",
     "LangGraph",
     "vLLM Inference Serving",

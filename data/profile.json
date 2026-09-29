@@ -1,14 +1,14 @@
 {
   "name": "Mohammad Nour Al Awad",
-  "title": "Machine Learning Engineer · PhD Student",
+  "title": "Researcher & Machine Learning Engineer · PhD Student",
   "researchDirection": "Adaptive Human-AI Collaboration via Agentic Systems",
   "location": "Saint Petersburg, Russia",
-  "summary": "I lead applied research and hands-on engineering across coding agents, developer personalization, context and memory, model orchestration, and efficient LLM systems.",
+  "summary": "I research and build coding agents, developer-personalized AI systems, adaptive context and memory, and efficient multi-model LLM workflows.",
   "photo": "assets/me-2.jpg",
-  "cv": "assets/cv-mohammad-nour-al-awad.pdf",
+  "cv": "assets/Mohammad_Nour_Al_Awad_cv.pdf",
   "highlights": [
-    "5+ years experience",
     "Research + Engineering",
-    "Supervising 8 Master's Students"
+    "Coding Agents & LLM Systems",
+    "Human-AI Collaboration"
   ]
 }

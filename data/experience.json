@@ -1,10 +1,11 @@
 [
   {
+    "featured": true,
     "role": "Machine Learning Engineer",
     "company": "ITMO University",
     "location": "Saint Petersburg, Russia",
     "period": "Mar 2024 - Present",
-    "summary": "Leading applied research on Human-AI collaboration, AI developer tools, and personalization, connecting research direction, system architecture, model orchestration, experiments, and publications. Hands-on work spans LLM deployment, backend services, Docker/Linux environments, Linux administration, and MLOps workflows.",
+    "summary": "Conducting applied research on Human-AI collaboration, AI developer tools, and personalization across research direction, system architecture, model orchestration, experiments, and publications. Hands-on work spans LLM deployment, backend services, Docker/Linux environments, Linux administration, and MLOps workflows.",
     "techStack": [
       "Python",
       "Coding Agents",
@@ -18,7 +19,26 @@
       "Linux",
       "MLOps",
       "RAG",
+      "Knowledge Graphs",
+      "Neo4j",
       "Playwright"
+    ],
+    "technicalCapabilities": [
+      {
+        "title": "Agentic AI & LLM Systems",
+        "description": "Coding-agent architecture, multi-model orchestration, adaptive context and memory, knowledge-graph reasoning, RAG, evaluation pipelines, and vLLM-based model serving.",
+        "items": ["Coding Agents", "LLM Systems", "LangGraph", "vLLM", "RAG", "Knowledge Graphs", "Neo4j"]
+      },
+      {
+        "title": "AI Platforms & Backend Engineering",
+        "description": "Python services, FastAPI and Django APIs, TypeScript editor integrations, Git/GitHub automation, workers, analytics, and database-backed product workflows.",
+        "items": ["Python", "FastAPI", "Django", "TypeScript"]
+      },
+      {
+        "title": "Infrastructure, Evaluation & Delivery",
+        "description": "Docker and Linux environments, Linux administration, MLOps, sandboxed execution, browser automation, and reproducible experiment infrastructure.",
+        "items": ["Docker", "Linux", "MLOps", "Playwright"]
+      }
     ],
     "highlights": [],
     "focusAreas": [
@@ -43,7 +63,8 @@
         "description": "Developed agentic systems for conversational data analysis and browser automation, including sandboxed execution, agent orchestration, multi-step reasoning, visualization, and multimodal interaction."
       }
     ],
-    "metricsTitle": "Repository and developer-behavior data",
+    "metricsTitle": "Research dataset scale",
+    "metricsDescription": "Repository and developer-interaction records used across my research on developer behavior, personalization, and AI-assisted software engineering. These figures summarize the coverage of the research datasets.",
     "metrics": [
       { "value": "1.47M+", "label": "events" },
       { "value": "521K+", "label": "commits" },
