@@ -4,88 +4,76 @@
     "company": "ITMO University",
     "location": "Saint Petersburg, Russia",
     "period": "Mar 2024 - Present",
-    "summary": "Working on adaptive LLM systems and agentic AI tools for real-world developer and analytics workflows.",
+    "summary": "Leading applied research on Human-AI collaboration, AI developer tools, and personalization, connecting research direction, system architecture, model orchestration, experiments, and publications. Hands-on work spans LLM deployment, backend services, Docker/Linux environments, Linux administration, and MLOps workflows.",
     "techStack": [
       "Python",
+      "Coding Agents",
+      "LLM Systems",
       "vLLM",
       "LangGraph",
       "FastAPI",
       "Django",
-      "Whisper",
-      "Qwen2.5",
-      "ChromaDB",
+      "TypeScript",
+      "Docker",
+      "Linux",
+      "MLOps",
+      "RAG",
       "Playwright"
     ],
-    "highlights": [
-      "Designed and deployed multi-LLM serving with vLLM for autocomplete, fill-in-the-middle, and chat.",
-      "Built a VSCode plugin with completion, refactoring, chat, docstring generation, and personalized RAG.",
-      "Published 2 papers in ASE 2025 and filed a patent on adaptive suggestion systems.",
-      "Developed a voice + text data visualization assistant using Django, FastAPI, Whisper, Qwen2.5, and Coqui TTS.",
-      "Published a research paper at ICDM 2025.",
-      "Built and tested prototype web agents for robust multi-step website navigation and extraction."
+    "highlights": [],
+    "focusAreas": [
+      {
+        "title": "Developer Behavior Modeling & Personalization",
+        "description": "Led behavioral intelligence research for AI-assisted software engineering, developing methods to infer developer intent, AI usage patterns, workflow habits, and recurring task routines from repository and interaction evidence. This work resulted in two research papers."
+      },
+      {
+        "title": "Adaptive LLM Code Assistance",
+        "description": "Led the design and evaluation of context-aware developer assistance spanning adaptive invocation, suggestion timing, output filtering, contextual support, and multi-model LLM serving for code completion, chat, and repository-aware assistance. This work contributed to two research papers."
+      },
+      {
+        "title": "ITMO Code — AI Education Platform",
+        "description": "Transformed the open-source Roo-Code coding extension into ITMO Code, a full-stack AI development platform for education. Designed and implemented editor-native AI assistance, role-based workflow orchestration, Git/GitHub automation, sandboxed execution, agentic code review, backend APIs, a database layer, workers, analytics, and automated pipelines."
+      },
+      {
+        "title": "Agentic Systems & Evaluation",
+        "description": "Conducted research on repository-grounded coding agents, issue localization, repository-level software repair, agent evaluation, and stage-aware pipelines. Evaluated how model effort can be allocated across exploration, localization, repair, and validation, connecting directly to my PhD direction in Adaptive Human-AI Collaboration via Agentic Systems."
+      },
+      {
+        "title": "Multimodal Data & Web Agents",
+        "description": "Developed agentic systems for conversational data analysis and browser automation, including sandboxed execution, agent orchestration, multi-step reasoning, visualization, and multimodal interaction."
+      }
     ],
-    "galleryTitle": "ITMO Project Album",
-    "galleryFolder": "assets/pics_itmo",
-    "gallery": [
+    "metricsTitle": "Repository and developer-behavior data",
+    "metrics": [
+      { "value": "1.47M+", "label": "events" },
+      { "value": "521K+", "label": "commits" },
+      { "value": "123K+", "label": "pull requests" },
+      { "value": "220K+", "label": "PR review comments" },
+      { "value": "228K+", "label": "PR reviews" },
+      { "value": "40K+", "label": "developers" }
+    ],
+    "galleries": [
       {
-        "src": "assets/pics_itmo/1.png",
-        "alt": "ITMO work snapshot 1",
-        "caption": "ITMO project snapshot 1"
+        "title": "ITMO Research & Engineering",
+        "images": [
+          { "src": "assets/pics_itmo/itmo-1.jpeg", "alt": "ITMO research and engineering snapshot 1" },
+          { "src": "assets/pics_itmo/itmo-2.jpeg", "alt": "ITMO research and engineering snapshot 2" },
+          { "src": "assets/pics_itmo/itmo-3.jpeg", "alt": "ITMO research and engineering snapshot 3" },
+          { "src": "assets/pics_itmo/itmo-4.jpeg", "alt": "ITMO research and engineering snapshot 4" },
+          { "src": "assets/pics_itmo/itmo-5.jpeg", "alt": "ITMO research and engineering snapshot 5" },
+          { "src": "assets/pics_itmo/itmo-6.jpeg", "alt": "ITMO research and engineering snapshot 6" },
+          { "src": "assets/pics_itmo/itmo-7.jpeg", "alt": "ITMO research and engineering snapshot 7" },
+          { "src": "assets/pics_itmo/itmo-8.jpeg", "alt": "ITMO research and engineering snapshot 8" },
+          { "src": "assets/pics_itmo/itmo-9.jpeg", "alt": "ITMO research and engineering snapshot 9" }
+        ]
       },
       {
-        "src": "assets/pics_itmo/2.png",
-        "alt": "ITMO work snapshot 2",
-        "caption": "ITMO project snapshot 2"
-      },
-      {
-        "src": "assets/pics_itmo/3.png",
-        "alt": "ITMO work snapshot 3",
-        "caption": "ITMO project snapshot 3"
-      },
-      {
-        "src": "assets/pics_itmo/4.png",
-        "alt": "ITMO work snapshot 4",
-        "caption": "ITMO project snapshot 4"
-      },
-      {
-        "src": "assets/pics_itmo/5.png",
-        "alt": "ITMO work snapshot 5",
-        "caption": "ITMO project snapshot 5"
-      },
-      {
-        "src": "assets/pics_itmo/6.png",
-        "alt": "ITMO work snapshot 6",
-        "caption": "ITMO project snapshot 6"
-      },
-      {
-        "src": "assets/pics_itmo/7.png",
-        "alt": "ITMO work snapshot 7",
-        "caption": "ITMO project snapshot 7"
-      },
-      {
-        "src": "assets/pics_itmo/8.png",
-        "alt": "ITMO work snapshot 8",
-        "caption": "ITMO project snapshot 8"
-      },
-      {
-        "src": "assets/pics_itmo/9.png",
-        "alt": "ITMO work snapshot 9",
-        "caption": "ITMO project snapshot 9"
-      },
-      {
-        "src": "assets/pics_itmo/77.png",
-        "alt": "ITMO work snapshot 10",
-        "caption": "ITMO project snapshot 10"
-      },
-      {
-        "src": "assets/pics_itmo/88.png",
-        "alt": "ITMO work snapshot 11",
-        "caption": "ITMO project snapshot 11"
-      },
-      {
-        "src": "assets/pics_itmo/99.png",
-        "alt": "ITMO work snapshot 12",
-        "caption": "ITMO project snapshot 12"
+        "title": "Huawei Lake Baikal Summit 2026",
+        "description": "Participated with a research poster/demo representing my work on developer-personalized AI coding agents.",
+        "images": [
+          { "src": "assets/pics_itmo/huawei-summit-2026-1.JPEG", "alt": "Presenting my research poster at Huawei Lake Baikal Summit 2026" },
+          { "src": "assets/pics_itmo/huawei-summit-2026-2.JPG", "alt": "Huawei Lake Baikal Summit 2026 demo showcase" }
+        ]
       }
     ],
     "demos": [

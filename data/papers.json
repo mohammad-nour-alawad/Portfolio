@@ -1,5 +1,21 @@
 [
   {
+    "title": "Cost-Effective Repository Exploration for Agentic Issue Localization",
+    "venue": "The 41st IEEE/ACM International Conference on Automated Software Engineering (ASE 2026), Workshop: 1st International Workshop on Agentic AI for Next-Generation Software Development (AgenticDev 2026)",
+    "year": "2026",
+    "summary": "Accepted at AgenticDev 2026, co-located with ASE 2026. The proceedings are forthcoming; the current version is available on arXiv.",
+    "link": "https://arxiv.org/abs/2608.29675",
+    "presentation": ""
+  },
+  {
+    "title": "Loc2Repair: A Framework for Evaluating the Impact of File-Level Issue Localization in Repo-Level LLM Repair",
+    "venue": "The 2nd Generative Code Intelligence Workshop (GeCoIn 2026), co-located with the 35th International Joint Conference on Artificial Intelligence (IJCAI-ECAI 2026)",
+    "year": "2026",
+    "summary": "Published in CEUR Workshop Proceedings, Volume 4238.",
+    "link": "https://ceur-ws.org/Vol-4238/paper8.pdf",
+    "presentation": ""
+  },
+  {
     "title": "A Multimodal Conversational Agent for Tabular Data Analysis",
     "venue": "The 2025 IEEE International Conference on Data Mining (ICDM 2025), Workshop: Information Seeking with Big Models (BigIS)",
     "year": "2025",

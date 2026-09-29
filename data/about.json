@@ -1,5 +1,6 @@
 {
-  "bio": "PhD student and Machine Learning Engineer focused on adaptive LLM systems, agentic AI, and large-scale data-driven R&D. I combine academic research with hands-on engineering for production-grade AI products.",
+  "bio": "My research focuses on Adaptive Human-AI Collaboration via Agentic Systems. I work across Human-AI collaboration, coding agents, developer personalization, context and memory, repository-level agents, adaptive LLM assistance, agent evaluation, model orchestration, and efficient LLM systems. At ITMO, I combine research direction and publications with hands-on system architecture, implementation, infrastructure, experimentation, and evaluation.",
+  "supervision": "Supervising 8 master's students at ITMO University on research topics related to coding agents, LLM systems, adaptive context and memory, model routing, RAG, agent evaluation, and AI-assisted software engineering.",
   "hobbies": [
     {
       "name": "Competitive programming",
@@ -49,6 +50,8 @@
     }
   ],
   "skills": [
+    "Human-AI Collaboration",
+    "Coding Agents",
     "Python",
     "Machine Learning Research",
     "Large Language Models (LLMs)",
@@ -57,6 +60,8 @@
     "Experiment Design and Ablation Studies",
     "Prompt Engineering",
     "RAG",
+    "Context and Memory Management",
+    "Model Routing",
     "LangGraph",
     "vLLM Inference Serving",
     "Data Curation and Web-Scale Scraping",
@@ -64,6 +69,8 @@
     "FastAPI",
     "Django",
     "TypeScript",
+    "Docker",
+    "MLOps",
     "Linux",
     "PyTorch",
     "TensorFlow"

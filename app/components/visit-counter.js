@@ -1,29 +1,19 @@
-"use client";
+const counterTarget =
+  process.env.NEXT_PUBLIC_COUNTER_TARGET ||
+  "mohammad-nour-alawad.github.io/Portfolio";
 
-import { useEffect, useState } from "react";
-
-const namespace = process.env.NEXT_PUBLIC_COUNTER_NAMESPACE || "mohammad-portfolio";
+const counterUrl = `https://hits.sh/${counterTarget}.svg?style=flat-square&label=Visits&color=0f4c81&labelColor=52607a`;
 
 export function VisitCounter() {
-  const [count, setCount] = useState(null);
-
-  useEffect(() => {
-    const key = `${window.location.hostname.replace(/\./g, "-")}-home`;
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (typeof data.value === "number") {
-          setCount(data.value);
-        }
-      })
-      .catch(() => {
-        setCount(null);
-      });
-  }, []);
-
   return (
-    <p className="mt-3 text-sm text-muted" aria-live="polite">
-      {count === null ? "Visits loading..." : `${count.toLocaleString()} visits`}
-    </p>
+    <div className="mt-3 flex items-center">
+      <img
+        src={counterUrl}
+        alt="Portfolio visit count"
+        height="20"
+        className="h-5 w-auto"
+        referrerPolicy="no-referrer"
+      />
+    </div>
   );
 }

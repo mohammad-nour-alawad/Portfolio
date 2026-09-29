@@ -41,13 +41,13 @@ jobs:
           fi
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ env.BASE_PATH }}
           NEXT_PUBLIC_SITE_URL: ${{ env.SITE_URL }}
-          NEXT_PUBLIC_COUNTER_NAMESPACE: ${{ github.repository_owner }}-portfolio
+          NEXT_PUBLIC_COUNTER_TARGET: ${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: npm run build
 
       - name: Upload artifact
@@ -64,4 +64,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

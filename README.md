@@ -30,6 +30,10 @@ All portfolio content is still JSON-driven:
 
 Static files are served from `public/assets/`.
 
+## Local source archive
+
+Non-deployable source material can be organized under `.archive/`. This directory is ignored by Git and is not included in the GitHub Pages artifact.
+
 ## GitHub Pages deployment
 
 This repo includes a workflow at `.github/workflows/deploy.yml` that:
@@ -49,7 +53,7 @@ Set `NEXT_PUBLIC_SITE_URL` in CI for production canonical URLs.
 
 ## Visit counter
 
-The visit counter uses [countapi.xyz](https://countapi.xyz/) from the browser. It tracks page loads, not unique users.
+The visit counter uses an image badge from [hits.sh](https://hits.sh/), which works with the static GitHub Pages export and tracks page loads rather than unique users.
 
-You can control its namespace with:
-- `NEXT_PUBLIC_COUNTER_NAMESPACE`
+You can control the tracked site path with:
+- `NEXT_PUBLIC_COUNTER_TARGET`

@@ -56,6 +56,38 @@ function ClickableImage({ src, alt, className, onOpen }) {
   );
 }
 
+function ExperienceGalleries({ item, onOpen }) {
+  const groups = Array.isArray(item.galleries)
+    ? item.galleries
+    : Array.isArray(item.gallery) && item.gallery.length > 0
+      ? [{ title: item.galleryTitle, images: item.gallery }]
+      : [];
+
+  if (groups.length === 0) return null;
+
+  return (
+    <div className="space-y-4">
+      {groups.map((group) => (
+        <section key={group.title || group.images[0]?.src}>
+          {group.title ? <h4 className="text-sm font-bold">{group.title}</h4> : null}
+          {group.description ? <p className="mt-1 text-xs text-muted">{group.description}</p> : null}
+          <div className="mt-2 grid grid-cols-3 gap-2">
+            {group.images.map((image) => (
+              <ClickableImage
+                key={image.src}
+                src={withBasePath(image.src)}
+                alt={image.alt || group.title || item.role}
+                className="h-20 w-full object-cover"
+                onOpen={onOpen}
+              />
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
+
 export default function HomePage() {
   const [lightbox, setLightbox] = useState(null);
 
@@ -108,7 +140,9 @@ export default function HomePage() {
 
       <section id="top" className="surface animate-rise grid gap-4 rounded-3xl p-4 md:grid-cols-[1.25fr_0.75fr] md:p-6">
         <div>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">Machine Learning Engineer + PhD Student</p>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+            {profile.researchDirection || profile.title}
+          </p>
           <h1 className="text-3xl font-black leading-[1.02] md:text-5xl">{profile.name}</h1>
           <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted md:text-lg">{profile.summary}</p>
           <p className="mt-2 text-sm text-muted">{profile.location}</p>
@@ -153,6 +187,15 @@ export default function HomePage() {
       <section id="about" className="surface animate-rise mt-4 rounded-3xl p-5" style={{ animationDelay: "120ms" }}>
         <h2 className="text-2xl font-bold md:text-3xl">About</h2>
         <p className="mt-2 leading-relaxed text-muted">{about.bio}</p>
+        {about.supervision ? (
+          <div
+            className="mt-4 rounded-2xl border p-4"
+            style={{ borderColor: "var(--stroke)", background: "var(--accent-soft)" }}
+          >
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent">Academic supervision</p>
+            <p className="mt-1 text-sm leading-relaxed">{about.supervision}</p>
+          </div>
+        ) : null}
         <div className="mt-4 flex flex-wrap gap-2">
           {about.skills.map((skill) => (
             <span
@@ -185,12 +228,53 @@ export default function HomePage() {
               </p>
 
               <div className="scrollbar-thin mt-3 flex-1 space-y-3 overflow-y-auto pr-1 text-sm leading-relaxed">
+                <ExperienceGalleries
+                  item={item}
+                  onOpen={(src, alt) => setLightbox({ src, alt })}
+                />
+
                 <p>{item.summary}</p>
-                <ul className="list-disc space-y-1 pl-5">
-                  {item.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
+
+                {Array.isArray(item.metrics) && item.metrics.length > 0 ? (
+                  <section>
+                    <h4 className="text-sm font-bold">{item.metricsTitle || "Scale"}</h4>
+                    <div className="mt-2 grid grid-cols-2 gap-2">
+                      {item.metrics.map((metric) => (
+                        <div
+                          key={metric.label}
+                          className="rounded-xl border p-2.5"
+                          style={{ borderColor: "var(--stroke)", background: "var(--accent-soft)" }}
+                        >
+                          <p className="text-lg font-black text-accent">{metric.value}</p>
+                          <p className="text-[11px] leading-tight text-muted">{metric.label}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                ) : null}
+
+                {Array.isArray(item.focusAreas) && item.focusAreas.length > 0 ? (
+                  <div className="space-y-2.5">
+                    {item.focusAreas.map((area) => (
+                      <section
+                        key={area.title}
+                        className="rounded-xl border p-3"
+                        style={{ borderColor: "var(--stroke)" }}
+                      >
+                        <h4 className="font-bold">{area.title}</h4>
+                        <p className="mt-1 text-muted">{area.description}</p>
+                      </section>
+                    ))}
+                  </div>
+                ) : null}
+
+                {Array.isArray(item.highlights) && item.highlights.length > 0 ? (
+                  <ul className="list-disc space-y-1 pl-5">
+                    {item.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                ) : null}
 
                 {Array.isArray(item.techStack) && item.techStack.length > 0 && (
                   <div className="flex flex-wrap gap-2">
@@ -223,19 +307,6 @@ export default function HomePage() {
                   </div>
                 )}
 
-                {Array.isArray(item.gallery) && item.gallery.length > 0 && (
-                  <div className="grid grid-cols-2 gap-2">
-                    {item.gallery.slice(0, 4).map((image) => (
-                      <ClickableImage
-                        key={image.src}
-                        src={withBasePath(image.src)}
-                        alt={image.alt || item.role}
-                        className="h-28 w-full object-cover"
-                        onOpen={(src, alt) => setLightbox({ src, alt })}
-                      />
-                    ))}
-                  </div>
-                )}
               </div>
             </article>
           ))}
