@@ -1,0 +1,41 @@
+[
+  {
+    "degree": "دكتوراه",
+    "institution": "ITMO University",
+    "field": "التعاون التكيفي بين الإنسان والذكاء الاصطناعي عبر الأنظمة الوكيلة",
+    "year": "متوقع في 2028",
+    "description": "أبحث في أنظمة LLM والأنظمة الوكيلة التكيفية، مع التركيز على وكلاء البرمجة، والسياق والذاكرة، والتخصيص، والاستدلال على مستوى المستودعات، والتعاون بين الإنسان والذكاء الاصطناعي.",
+    "link": "https://en.itmo.ru/en/faculty/114/fakultet_cifrovyh_transformaciy.htm",
+    "linkLabel": "كلية تقنيات الذكاء الاصطناعي"
+  },
+  {
+    "degree": "درجة الماجستير",
+    "institution": "ITMO University",
+    "field": "البيانات الضخمة وتعلم الآلة",
+    "year": "2025",
+    "description": "أتممت البرنامج الدولي في البيانات الضخمة وتعلم الآلة بمعدل 5/5، وتخرجت في المرتبة الأولى على الدفعة بدبلوم أحمر. جمعت دراستي بين تعلم الآلة، ومعالجة البيانات واسعة النطاق، والبحث في هندسة البرمجيات المدعومة بالذكاء الاصطناعي.",
+    "link": "https://en.itmo.ru/en/viewjep/2/5/Big_Data_and_Machine_Learning.htm",
+    "linkLabel": "برنامج Big Data and Machine Learning في ITMO"
+  },
+  {
+    "degree": "درجة البكالوريوس",
+    "institution": "Higher Institute of Applied Sciences and Technology",
+    "field": "هندسة البرمجيات",
+    "year": "2022",
+    "description": "درست هندسة البرمجيات على أساس متين في الخوارزميات والأنظمة وعلوم الحاسوب والهندسة التطبيقية. تخرجت في المرتبة الأولى بمعدل امتياز 86.17%.",
+    "link": "https://hiast.edu.sy/en/software_engineering_artificial_intelligence_program",
+    "linkLabel": "Higher Institute for Applied Sciences and Technology",
+    "image": "assets/1748914545968.jpeg",
+    "imageAlt": "ترتيبي خلال الدراسة في HIAST",
+    "imageCaption": "الترتيب خلال الدراسة في HIAST"
+  },
+  {
+    "degree": "المركز الوطني للمتميزين",
+    "institution": "Distinguished Individuals Program",
+    "field": "برنامج الطلبة المتميزين",
+    "year": "2017",
+    "description": "أتممت برنامج التعليم الثانوي الانتقائي في سوريا للطلبة المتفوقين، مع تركيز على الرياضيات والعلوم وحل المشكلات والتعلم المستقل والتعليم الموجّه نحو البحث.",
+    "link": "http://ncd.sy",
+    "linkLabel": "المركز الوطني للمتميزين"
+  }
+]

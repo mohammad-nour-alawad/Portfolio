@@ -1,12 +1,13 @@
 export const dynamic = "force-static";
 
+import { siteUrl } from "@/app/lib/config";
+
 export default function robots() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
   return {
     rules: {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: `${baseUrl}/sitemap.xml`
+    sitemap: `${siteUrl}/sitemap.xml`
   };
 }

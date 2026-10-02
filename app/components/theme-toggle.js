@@ -8,7 +8,7 @@ function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
 }
 
-export function ThemeToggle() {
+export function ThemeToggle({ labels }) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -39,9 +39,9 @@ export function ThemeToggle() {
         applyTheme(nextTheme);
         window.localStorage.setItem(STORAGE_KEY, nextTheme);
       }}
-      aria-label={`Switch to ${nextTheme} theme`}
+      aria-label={nextTheme === "dark" ? labels.switchToDark : labels.switchToLight}
     >
-      {theme === "dark" ? "Light mode" : "Dark mode"}
+      {theme === "dark" ? labels.light : labels.dark}
     </button>
   );
 }

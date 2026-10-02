@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Cost-Effective Repository Exploration for Agentic Issue Localization",
+    "venue": "The 41st IEEE/ACM International Conference on Automated Software Engineering (ASE 2026), Workshop: 1st International Workshop on Agentic AI for Next-Generation Software Development (AgenticDev 2026)",
+    "year": "2026",
+    "summary": "قُبل البحث في AgenticDev 2026 المنعقد بالتزامن مع ASE 2026. ستصدر الوقائع لاحقًا، والنسخة الحالية متاحة على arXiv.",
+    "link": "https://arxiv.org/abs/2608.29675",
+    "presentation": ""
+  },
+  {
+    "title": "Loc2Repair: A Framework for Evaluating the Impact of File-Level Issue Localization in Repo-Level LLM Repair",
+    "venue": "The 2nd Generative Code Intelligence Workshop (GeCoIn 2026), co-located with the 35th International Joint Conference on Artificial Intelligence (IJCAI-ECAI 2026)",
+    "year": "2026",
+    "summary": "نُشر في CEUR Workshop Proceedings، المجلد 4238.",
+    "link": "https://ceur-ws.org/Vol-4238/paper8.pdf",
+    "presentation": ""
+  },
+  {
+    "title": "A Multimodal Conversational Agent for Tabular Data Analysis",
+    "venue": "The 2025 IEEE International Conference on Data Mining (ICDM 2025), Workshop: Information Seeking with Big Models (BigIS)",
+    "year": "2025",
+    "summary": "نُشر ضمن Proceedings of the 2025 IEEE International Conference on Data Mining Workshops (ICDMW 2025) في IEEE Xplore Digital Library.",
+    "link": "https://ieeexplore.ieee.org/document/11415881/",
+    "presentation": "https://www.youtube.com/watch?v=VpPVszad4bA"
+  },
+  {
+    "title": "Optimizing LLM Code Suggestions: Feedback-Driven Timing with Lightweight State Bounds",
+    "venue": "The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025), Workshop: Intelligent Software Engineering (ISE 2025)",
+    "year": "2025",
+    "summary": "نُشر ضمن Proceedings of the 40th IEEE/ACM International Conference on Automated Software Engineering Workshops (ASEW 2025).",
+    "link": "https://ieeexplore.ieee.org/abstract/document/11334664",
+    "presentation": "https://www.youtube.com/watch?v=U1mbcSVpKcA"
+  },
+  {
+    "title": "Pre-Filtering Code Suggestions using Developer Behavioral Telemetry to Optimize LLM-Assisted Programming",
+    "venue": "The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025), Workshop: 7th International Workshop on Automated and verifiable Software sYstem DEvelopment (ASYDE 2025)",
+    "year": "2025",
+    "summary": "نُشر ضمن Proceedings of the 40th IEEE/ACM International Conference on Automated Software Engineering Workshops (ASEW 2025).",
+    "link": "https://ieeexplore.ieee.org/abstract/document/11334313",
+    "presentation": "https://www.youtube.com/watch?v=AMDxwSMrRso"
+  }
+]

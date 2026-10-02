@@ -1,15 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import profile from "@/data/profile.json";
-import about from "@/data/about.json";
-import experience from "@/data/experience.json";
-import study from "@/data/study.json";
-import papers from "@/data/papers.json";
-import reviews from "@/data/reviews.json";
-import links from "@/data/links.json";
 import { ThemeToggle } from "@/app/components/theme-toggle";
 import { VisitCounter } from "@/app/components/visit-counter";
+import { localeConfig, locales } from "@/app/lib/config";
+import { createPersonJsonLd } from "@/app/lib/person";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const heroProfileNames = ["Google Scholar", "Scopus", "LinkedIn", "Telegram"];
@@ -78,14 +73,14 @@ function SocialIcon({ name }) {
   );
 }
 
-function ClickableImage({ src, alt, className, onOpen }) {
+function ClickableImage({ src, alt, className, onOpen, labels }) {
   return (
     <button
       type="button"
       onClick={() => onOpen(src, alt)}
       className="group relative overflow-hidden rounded-xl border transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2"
       style={{ borderColor: "var(--stroke)" }}
-      aria-label={`Open image: ${alt}`}
+      aria-label={`${labels.open}: ${alt}`}
     >
       <img src={src} alt={alt} className={className} loading="lazy" />
       <span
@@ -95,13 +90,13 @@ function ClickableImage({ src, alt, className, onOpen }) {
           background: "linear-gradient(180deg, transparent, rgba(7, 17, 34, 0.72))"
         }}
       >
-        Click to expand
+        {labels.expand}
       </span>
     </button>
   );
 }
 
-function ExperienceGalleries({ item, onOpen, featured = false }) {
+function ExperienceGalleries({ item, onOpen, labels, featured = false }) {
   const groups = Array.isArray(item.galleries)
     ? item.galleries
     : Array.isArray(item.gallery) && item.gallery.length > 0
@@ -118,8 +113,8 @@ function ExperienceGalleries({ item, onOpen, featured = false }) {
           className="rounded-2xl border p-3"
           style={{ borderColor: "var(--stroke)" }}
         >
-          {group.title ? <h4 className="text-sm font-bold">{group.title}</h4> : null}
-          {group.description ? <p className="mt-1 text-xs text-muted">{group.description}</p> : null}
+          {group.title ? <h4 className="text-sm font-bold" dir="auto">{group.title}</h4> : null}
+          {group.description ? <p className="mt-1 text-xs text-muted" dir="auto">{group.description}</p> : null}
           <div
             className={`mt-3 grid gap-2 ${
               group.images.length <= 2
@@ -136,6 +131,7 @@ function ExperienceGalleries({ item, onOpen, featured = false }) {
                 alt={image.alt || group.title || item.role}
                 className={featured ? "h-24 w-full object-cover sm:h-28" : "h-20 w-full object-cover"}
                 onOpen={onOpen}
+                labels={labels}
               />
             ))}
           </div>
@@ -145,25 +141,37 @@ function ExperienceGalleries({ item, onOpen, featured = false }) {
   );
 }
 
-export default function HomePage() {
+function LanguageSwitcher({ locale, label }) {
+  return (
+    <nav aria-label={label} className="language-switcher flex items-center gap-1 text-xs font-bold" dir="ltr">
+      {locales.map((item, index) => (
+        <span className="contents" key={item}>
+          {index > 0 ? <span aria-hidden="true" className="text-muted">·</span> : null}
+          <a
+            href={withBasePath(localeConfig[item].path)}
+            hrefLang={item}
+            lang={item}
+            aria-current={locale === item ? "page" : undefined}
+            className="rounded-md px-1.5 py-1 transition hover:text-accent"
+            style={{ color: locale === item ? "var(--accent-strong)" : "var(--muted)" }}
+          >
+            {localeConfig[item].label}
+          </a>
+        </span>
+      ))}
+    </nav>
+  );
+}
+
+export default function PortfolioPage({ content }) {
+  const { profile, about, experience, study, papers, reviews, links, identity, locale, ui } = content;
   const [lightbox, setLightbox] = useState(null);
 
-  const personJsonLd = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: profile.name,
-      jobTitle: profile.title,
-      description: profile.summary,
-      url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
-      sameAs: links.map((item) => item.url)
-    }),
-    []
-  );
+  const personJsonLd = useMemo(() => createPersonJsonLd({ profile, identity, links }), [profile, identity, links]);
 
   const paperYears = useMemo(
     () => [...new Set(papers.map((item) => item.year))].sort((a, b) => Number(b) - Number(a)),
-    []
+    [papers]
   );
 
   const featuredExperience = experience.find((item) => item.featured) || experience[0];
@@ -185,38 +193,44 @@ export default function HomePage() {
           {profile.name}
         </a>
         <nav
-          aria-label="Main sections"
+          aria-label={ui.navAria}
           className="order-3 flex w-full flex-nowrap justify-between gap-1 text-[11px] font-medium sm:justify-start sm:gap-2 sm:text-sm md:order-2 md:w-auto"
         >
-          {["About", "Experience", "Research", "Education", "Contact"].map((item) => (
+          {Object.entries(ui.nav).map(([id, label]) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={id}
+              href={`#${id}`}
               className="whitespace-nowrap rounded-full border px-2 py-1.5 transition hover:-translate-y-0.5 sm:px-3"
               style={{ borderColor: "var(--stroke)", color: "var(--muted)" }}
             >
-              {item}
+              {label}
             </a>
           ))}
         </nav>
-        <div className="order-2 md:order-3">
-          <ThemeToggle />
+        <div className="order-2 flex items-center gap-2 md:order-3">
+          <LanguageSwitcher locale={locale} label={ui.languageSwitcher} />
+          <ThemeToggle labels={ui.theme} />
         </div>
       </header>
 
       <section id="top" className="surface animate-rise grid gap-4 rounded-3xl p-4 md:grid-cols-[1.25fr_0.75fr] md:p-6">
         <div>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+          <p className="eyebrow mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
             {profile.researchDirection || profile.title}
           </p>
           <h1 className="text-3xl font-black leading-[1.02] md:text-5xl">{profile.name}</h1>
+          {locale === "en" ? (
+            <p className="mt-1 text-lg font-bold text-accent" lang="ar" dir="rtl">
+              {identity.arabicName}
+            </p>
+          ) : null}
           <p className="mt-2 text-sm font-semibold md:text-base">{profile.title}</p>
           <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted">{profile.summary}</p>
           <p className="mt-2 text-sm text-muted">{profile.location}</p>
 
           <div className="mt-5 flex flex-wrap gap-2.5">
             <a href={withBasePath(profile.cv)} target="_blank" rel="noreferrer" className="btn-primary rounded-xl px-4 py-2.5 text-sm font-bold transition hover:-translate-y-0.5">
-              View CV
+              {ui.actions.viewCv}
             </a>
             {heroProfileLinks.map((item) => (
               <a
@@ -227,7 +241,7 @@ export default function HomePage() {
                 className="rounded-xl border px-3 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5"
                 style={{ borderColor: "var(--stroke)", color: "var(--muted)" }}
               >
-                {item.name === "Google Scholar" ? "Scholar" : item.name}
+                {item.name === "Google Scholar" ? ui.actions.scholar : item.name}
               </a>
             ))}
           </div>
@@ -237,6 +251,7 @@ export default function HomePage() {
               <span
                 key={item}
                 className="rounded-full border px-2.5 py-1 text-xs font-semibold"
+                dir="auto"
                 style={{
                   borderColor: "var(--stroke)",
                   color: "var(--muted)"
@@ -246,7 +261,7 @@ export default function HomePage() {
               </span>
             ))}
           </div>
-          <VisitCounter />
+          <VisitCounter label={ui.counter.label} alt={ui.counter.alt} />
         </div>
 
         <div className="animate-fade-in flex items-center justify-center md:justify-end">
@@ -255,12 +270,13 @@ export default function HomePage() {
             alt={profile.name}
             className="h-[290px] w-[260px] max-w-full object-cover sm:w-[300px] md:h-[320px]"
             onOpen={(src, alt) => setLightbox({ src, alt })}
+            labels={ui.image}
           />
         </div>
       </section>
 
       <section id="about" className="surface animate-rise mt-4 scroll-mt-32 rounded-3xl p-5 md:scroll-mt-24" style={{ animationDelay: "120ms" }}>
-        <h2 className="text-2xl font-bold md:text-3xl">About</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">{ui.nav.about}</h2>
         <p className="mt-2 leading-relaxed text-muted">{about.bio}</p>
         {about.supervision ? <p className="mt-3 text-sm leading-relaxed text-muted">{about.supervision}</p> : null}
         <div className="mt-4 flex flex-wrap gap-2">
@@ -268,6 +284,7 @@ export default function HomePage() {
             <span
               key={skill}
               className="rounded-full border px-2.5 py-1 text-xs font-medium text-muted"
+              dir="auto"
               style={{ borderColor: "var(--stroke)" }}
             >
               {skill}
@@ -279,8 +296,8 @@ export default function HomePage() {
       <div className="flex flex-col">
       <section id="research" className="order-2 mt-8 scroll-mt-32 md:scroll-mt-24">
         <div className="mb-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Selected publications</p>
-          <h2 className="mt-1 text-2xl font-bold md:text-3xl">Research</h2>
+          <p className="eyebrow text-xs font-semibold uppercase tracking-[0.18em] text-accent">{ui.sections.selectedPublications}</p>
+          <h2 className="mt-1 text-2xl font-bold md:text-3xl">{ui.sections.research}</h2>
         </div>
 
         <div className="scrollbar-thin flex snap-x gap-5 overflow-x-auto pb-4">
@@ -297,7 +314,7 @@ export default function HomePage() {
                 <span className="h-px flex-1" style={{ background: "var(--stroke)" }} />
               </div>
 
-              <div className="scrollbar-thin h-[600px] space-y-3 overflow-y-auto pr-2 md:h-[640px]">
+              <div className="scroll-content scrollbar-thin h-[600px] space-y-3 overflow-y-auto md:h-[640px]">
                 {papers
                   .filter((item) => item.year === year)
                   .map((item) => (
@@ -305,12 +322,12 @@ export default function HomePage() {
                       className="surface formal-ring flex flex-col rounded-2xl p-4"
                       key={`${item.year}-${item.title}`}
                     >
-                      <div className="flex items-center justify-between gap-3 text-xs font-semibold uppercase tracking-widest text-accent">
-                        <span>Publication</span>
+                      <div className="eyebrow flex items-center justify-between gap-3 text-xs font-semibold uppercase tracking-widest text-accent">
+                        <span>{ui.sections.publication}</span>
                         <span>{item.year}</span>
                       </div>
-                      <h4 className="mt-2 text-base font-bold leading-snug md:text-lg">{item.title}</h4>
-                      <p className="mt-2 text-xs leading-relaxed text-muted">{item.venue}</p>
+                      <h4 className="mt-2 text-base font-bold leading-snug md:text-lg" dir="auto">{item.title}</h4>
+                      <p className="mt-2 text-xs leading-relaxed text-muted" dir="auto">{item.venue}</p>
                       <p className="mt-3 text-sm leading-relaxed">{item.summary}</p>
 
                       {item.link || item.presentation ? (
@@ -322,7 +339,7 @@ export default function HomePage() {
                               rel="noreferrer"
                               className="btn-secondary rounded-lg px-3 py-1.5 text-xs font-semibold transition hover:-translate-y-0.5"
                             >
-                              Paper
+                              {ui.actions.paper}
                             </a>
                           ) : null}
                           {item.presentation ? (
@@ -333,7 +350,7 @@ export default function HomePage() {
                               className="rounded-lg border px-3 py-1.5 text-xs font-semibold transition hover:-translate-y-0.5"
                               style={{ borderColor: "var(--stroke)", color: "var(--muted)" }}
                             >
-                              Presentation
+                              {ui.actions.presentation}
                             </a>
                           ) : null}
                         </div>
@@ -346,7 +363,7 @@ export default function HomePage() {
         </div>
 
         <section className="mt-8" aria-labelledby="academic-activities">
-          <h3 id="academic-activities" className="text-lg font-bold">Academic activity</h3>
+          <h3 id="academic-activities" className="text-lg font-bold">{ui.sections.academicActivity}</h3>
           <div className="mt-3 grid auto-rows-fr gap-4 md:grid-cols-2">
             {reviews.map((item) => (
               <article className="surface h-full rounded-2xl p-5" key={`${item.activity}-${item.venue}`}>
@@ -355,31 +372,23 @@ export default function HomePage() {
                 <p className="mt-3 text-sm leading-relaxed">{item.summary}</p>
               </article>
             ))}
-            <article className="surface h-full rounded-2xl p-5">
-              <h4 className="font-bold">Master's Student Supervision</h4>
-              <p className="mt-1 text-sm text-muted">ITMO University</p>
-              <p className="mt-3 text-sm leading-relaxed">
-                Supervising master's students working on coding agents, context and memory, model routing, RAG,
-                and agent evaluation.
-              </p>
-            </article>
           </div>
         </section>
       </section>
 
       <section id="experience" className="order-1 mt-10 scroll-mt-32 md:scroll-mt-24">
         <div className="mb-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Research + engineering</p>
-          <h2 className="mt-1 text-2xl font-bold md:text-3xl">Experience</h2>
+          <p className="eyebrow text-xs font-semibold uppercase tracking-[0.18em] text-accent">{ui.sections.researchEngineering}</p>
+          <h2 className="mt-1 text-2xl font-bold md:text-3xl">{ui.sections.experience}</h2>
         </div>
 
         {featuredExperience ? (
           <article className="surface formal-ring rounded-3xl p-5 md:p-7">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-accent">Current role</p>
+                <p className="eyebrow text-xs font-semibold uppercase tracking-widest text-accent">{ui.sections.currentRole}</p>
                 <h3 className="mt-2 text-xl font-bold md:text-2xl">
-                  {featuredExperience.role} <span className="font-medium text-muted">@ {featuredExperience.company}</span>
+                  {featuredExperience.role} <span className="font-medium text-muted" dir="auto">@ {featuredExperience.company}</span>
                 </h3>
               </div>
               <p className="text-sm text-muted">
@@ -391,7 +400,7 @@ export default function HomePage() {
 
             {Array.isArray(featuredExperience.focusAreas) && featuredExperience.focusAreas.length > 0 ? (
               <section className="mt-7">
-                <h4 className="text-sm font-bold">Research and engineering areas</h4>
+                <h4 className="text-sm font-bold">{ui.sections.researchAreas}</h4>
                 <div className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                   {featuredExperience.focusAreas.map((area) => (
                     <article
@@ -409,11 +418,11 @@ export default function HomePage() {
                       className="flex h-[240px] scroll-mt-32 flex-col overflow-hidden rounded-2xl border p-4 md:scroll-mt-24"
                       style={{ borderColor: "var(--stroke)", background: "var(--bg-elev)" }}
                     >
-                      <h5 className="font-bold leading-snug">{featuredExperience.metricsTitle || "Scale"}</h5>
+                      <h5 className="font-bold leading-snug">{featuredExperience.metricsTitle || ui.sections.scale}</h5>
                       <div
-                        className="scrollbar-thin mt-2 min-h-0 flex-1 overflow-y-auto pr-2 focus-visible:outline-none focus-visible:ring-2"
+                        className="scroll-content scrollbar-thin mt-2 min-h-0 flex-1 overflow-y-auto focus-visible:outline-none focus-visible:ring-2"
                         role="region"
-                        aria-label="Research dataset details"
+                        aria-label={ui.sections.datasetDetails}
                         tabIndex={0}
                       >
                         {featuredExperience.metricsDescription ? (
@@ -441,12 +450,13 @@ export default function HomePage() {
             ) : null}
 
             <section className="mt-7">
-              <h4 className="text-sm font-bold">Gallery</h4>
+              <h4 className="text-sm font-bold">{ui.sections.gallery}</h4>
               <div className="mt-3">
                 <ExperienceGalleries
                   item={featuredExperience}
                   featured
                   onOpen={(src, alt) => setLightbox({ src, alt })}
+                  labels={ui.image}
                 />
               </div>
             </section>
@@ -454,10 +464,9 @@ export default function HomePage() {
             <div className="mt-7 border-t pt-5" style={{ borderColor: "var(--stroke)" }}>
               {Array.isArray(featuredExperience.technicalCapabilities) && featuredExperience.technicalCapabilities.length > 0 ? (
                 <section id="technical-capabilities" className="scroll-mt-32 md:scroll-mt-24">
-                  <h4 className="text-base font-bold">Technical capabilities</h4>
+                  <h4 className="text-base font-bold">{ui.sections.technicalCapabilities}</h4>
                   <p className="mt-1 max-w-4xl text-sm leading-relaxed text-muted">
-                    End-to-end work spanning research prototypes, production-oriented AI platforms, model serving,
-                    evaluation infrastructure, and deployment.
+                    {ui.sections.technicalCapabilitiesIntro}
                   </p>
                   <div className="mt-3 grid gap-3 lg:grid-cols-3">
                     {featuredExperience.technicalCapabilities.map((capability) => (
@@ -473,6 +482,7 @@ export default function HomePage() {
                             <span
                               key={item}
                               className="rounded-full border px-2 py-0.5 text-[11px] font-medium text-muted"
+                              dir="auto"
                               style={{ borderColor: "var(--stroke)" }}
                             >
                               {item}
@@ -485,13 +495,14 @@ export default function HomePage() {
                 </section>
               ) : Array.isArray(featuredExperience.techStack) && featuredExperience.techStack.length > 0 ? (
                 <section>
-                  <h4 className="text-sm font-bold">Technical capabilities</h4>
+                  <h4 className="text-sm font-bold">{ui.sections.technicalCapabilities}</h4>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {featuredExperience.techStack.map((tech) => (
                       <span
                         className="rounded-full border px-2.5 py-1 text-xs font-medium text-muted"
                         style={{ borderColor: "var(--stroke)" }}
                         key={tech}
+                        dir="auto"
                       >
                         {tech}
                       </span>
@@ -502,7 +513,7 @@ export default function HomePage() {
 
               {Array.isArray(featuredExperience.demos) && featuredExperience.demos.length > 0 ? (
                 <section className="mt-5">
-                  <h4 className="text-sm font-bold">Selected demos</h4>
+                  <h4 className="text-sm font-bold">{ui.sections.selectedDemos}</h4>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {featuredExperience.demos.map((demo) => (
                       <a
@@ -513,7 +524,7 @@ export default function HomePage() {
                         className="rounded-lg border px-3 py-1.5 text-xs font-semibold transition hover:-translate-y-0.5"
                         style={{ borderColor: "var(--stroke)", color: "var(--muted)" }}
                       >
-                        {demo.name || "Demo"}
+                        {demo.name || ui.actions.demo}
                       </a>
                     ))}
                   </div>
@@ -525,26 +536,26 @@ export default function HomePage() {
 
         {previousExperience.length > 0 ? (
           <section className="mt-8" aria-labelledby="earlier-experience">
-            <h3 id="earlier-experience" className="text-lg font-bold">Earlier roles</h3>
+            <h3 id="earlier-experience" className="text-lg font-bold">{ui.sections.earlierRoles}</h3>
             <div className="mt-3 grid auto-rows-fr items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
               {previousExperience.map((item) => (
                 <article className="surface flex h-[560px] flex-col overflow-hidden rounded-2xl p-5 md:h-[520px]" key={`${item.company}-${item.role}`}>
                   <h4 className="text-lg font-bold leading-snug">
-                    {item.role} <span className="font-medium text-muted">@ {item.company}</span>
+                    {item.role} <span className="font-medium text-muted" dir="auto">@ {item.company}</span>
                   </h4>
                   <p className="mt-1 text-sm text-muted">
                     {item.period} | {item.location}
                   </p>
                   <div
-                    className="scrollbar-thin mt-3 min-h-0 flex-1 overflow-y-auto pr-2 focus-visible:outline-none focus-visible:ring-2"
+                    className="scroll-content scrollbar-thin mt-3 min-h-0 flex-1 overflow-y-auto focus-visible:outline-none focus-visible:ring-2"
                     role="region"
-                    aria-label={`${item.role} details`}
+                    aria-label={`${item.role}: ${ui.sections.details}`}
                     tabIndex={0}
                   >
                     <p className="text-sm leading-relaxed">{item.summary}</p>
 
                     {Array.isArray(item.highlights) && item.highlights.length > 0 ? (
-                      <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-muted">
+                      <ul className="localized-list mt-3 list-disc space-y-1 text-sm leading-relaxed text-muted">
                         {item.highlights.map((highlight) => (
                           <li key={highlight}>{highlight}</li>
                         ))}
@@ -553,7 +564,7 @@ export default function HomePage() {
 
                   {Array.isArray(item.gallery) && item.gallery.length > 0 ? (
                     <div className="mt-4">
-                      <ExperienceGalleries item={item} onOpen={(src, alt) => setLightbox({ src, alt })} />
+                      <ExperienceGalleries item={item} labels={ui.image} onOpen={(src, alt) => setLightbox({ src, alt })} />
                     </div>
                   ) : null}
 
@@ -564,6 +575,7 @@ export default function HomePage() {
                           className="rounded-full border px-2 py-0.5 text-[11px] font-medium text-muted"
                           style={{ borderColor: "var(--stroke)" }}
                           key={tech}
+                          dir="auto"
                         >
                           {tech}
                         </span>
@@ -582,7 +594,7 @@ export default function HomePage() {
                           className="rounded-lg border px-3 py-1.5 text-xs font-semibold transition hover:-translate-y-0.5"
                           style={{ borderColor: "var(--stroke)", color: "var(--muted)" }}
                         >
-                          {demo.name || "Demo"}
+                          {demo.name || ui.actions.demo}
                         </a>
                       ))}
                     </div>
@@ -598,8 +610,8 @@ export default function HomePage() {
 
       <section id="education" className="mt-10 scroll-mt-32 md:scroll-mt-24">
         <div className="mb-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Academic background</p>
-          <h2 className="mt-1 text-2xl font-bold md:text-3xl">Education</h2>
+          <p className="eyebrow text-xs font-semibold uppercase tracking-[0.18em] text-accent">{ui.sections.academicBackground}</p>
+          <h2 className="mt-1 text-2xl font-bold md:text-3xl">{ui.sections.education}</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {study.map((item) => (
@@ -613,7 +625,7 @@ export default function HomePage() {
                   {item.year}
                 </span>
               </div>
-              <p className="mt-2 text-sm font-semibold text-accent">{item.institution}</p>
+              <p className="mt-2 text-sm font-semibold text-accent" dir="auto">{item.institution}</p>
               <p className="mt-1 text-sm font-medium">{item.field}</p>
               {item.image ? (
                 <div className="mt-3 grid gap-4 sm:grid-cols-[minmax(0,1fr)_112px] sm:items-start">
@@ -623,6 +635,7 @@ export default function HomePage() {
                     alt={item.imageAlt || item.degree}
                     className="h-28 w-full object-cover sm:h-32"
                     onOpen={(src, alt) => setLightbox({ src, alt })}
+                    labels={ui.image}
                   />
                 </div>
               ) : item.description ? (
@@ -635,7 +648,8 @@ export default function HomePage() {
                   rel="noreferrer"
                   className="mt-auto pt-4 text-sm font-semibold text-accent underline decoration-transparent underline-offset-4 transition hover:decoration-current"
                 >
-                  {item.linkLabel || "Program website"} →
+                  {item.linkLabel || ui.actions.programWebsite}
+                  <span aria-hidden="true" className="external-arrow"> →</span>
                 </a>
               ) : null}
             </article>
@@ -644,12 +658,12 @@ export default function HomePage() {
       </section>
 
       <section id="contact" className="surface mt-6 scroll-mt-32 rounded-3xl p-5 md:scroll-mt-24">
-        <h2 className="text-2xl font-bold md:text-3xl">Contact</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">{ui.sections.contact}</h2>
         <p className="mt-2 max-w-2xl text-muted">
-          If you are hiring, collaborating, or discussing research, email is the fastest channel.
+          {ui.contact.intro}
         </p>
         <a href="mailto:mohammadnouralawad1@gmail.com" className="btn-primary mt-4 inline-flex rounded-xl px-4 py-2.5 text-sm font-bold transition hover:-translate-y-0.5">
-          Contact via Email
+          {ui.contact.email}
         </a>
 
         <div className="scrollbar-thin mt-4 flex flex-nowrap gap-2 overflow-x-auto pb-2">
@@ -667,7 +681,7 @@ export default function HomePage() {
               >
                 <SocialIcon name={item.name} />
               </span>
-              <span className="text-sm font-medium leading-tight">{item.name}</span>
+              <span className="text-sm font-medium leading-tight" dir="auto">{item.name}</span>
             </a>
           ))}
         </div>
@@ -678,15 +692,16 @@ export default function HomePage() {
           className="animate-fade-in fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           role="dialog"
           aria-modal="true"
+          aria-label={ui.image.dialog}
           onClick={() => setLightbox(null)}
         >
           <button
             type="button"
-            className="absolute right-4 top-4 rounded-full border px-3 py-1 text-sm font-semibold text-white"
+            className="lightbox-close absolute top-4 rounded-full border px-3 py-1 text-sm font-semibold text-white"
             style={{ borderColor: "rgba(255,255,255,0.32)" }}
             onClick={() => setLightbox(null)}
           >
-            Close
+            {ui.image.close}
           </button>
           <img
             src={lightbox.src}

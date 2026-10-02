@@ -30,10 +30,42 @@ body {
 }
 
 body {
+  font-family: var(--font-body);
   background: radial-gradient(1200px 500px at 5% -5%, color-mix(in oklab, var(--accent) 22%, transparent), transparent),
     radial-gradient(1000px 450px at 100% 0%, color-mix(in oklab, var(--accent) 16%, transparent), transparent),
     linear-gradient(180deg, var(--bg), color-mix(in oklab, var(--bg) 82%, #000 18%));
   color: var(--text);
+}
+
+html:lang(ar) {
+  --font-body: "Noto Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-display: "Noto Naskh Arabic", "Times New Roman", serif;
+}
+
+[dir="rtl"] .eyebrow {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+html:lang(ar) .tracking-wide {
+  letter-spacing: 0;
+}
+
+.scroll-content {
+  padding-inline-end: 0.5rem;
+}
+
+.localized-list {
+  padding-inline-start: 1.25rem;
+}
+
+.lightbox-close {
+  inset-inline-end: 1rem;
+}
+
+[dir="rtl"] .external-arrow {
+  display: inline-block;
+  transform: scaleX(-1);
 }
 
 @layer utilities {

@@ -1,4 +1,4 @@
-# Mohammad Nour Al Awad - Next.js Portfolio
+# Mohammad Nour Al Awad - Multilingual Next.js Portfolio
 
 This portfolio is built with Next.js using static export, so it can be hosted on GitHub Pages with good SEO and fast loading.
 
@@ -19,14 +19,14 @@ The static output is generated in `out/`.
 
 ## Content editing (JSON-first)
 
-All portfolio content is still JSON-driven:
-- `data/profile.json`
-- `data/about.json`
-- `data/experience.json`
-- `data/study.json`
-- `data/papers.json`
-- `data/reviews.json`
-- `data/links.json`
+Portfolio content remains JSON-driven and is grouped by locale:
+- `data/en/` for the English root page
+- `data/ar/` for `/ar/`
+- `data/ru/` for `/ru/`
+
+Each locale contains `profile.json`, `about.json`, `experience.json`, `study.json`, `papers.json`, `reviews.json`, and `ui.json`. Shared identity and profile links live in `data/identity.json` and `data/links.json`.
+
+The Russian name is configured as `Ал Авад Мохаммад Нур` in `data/identity.json`. Update that single field if the preferred official spelling changes.
 
 Static files are served from `public/assets/`.
 
@@ -44,8 +44,8 @@ This repo includes a workflow at `.github/workflows/deploy.yml` that:
 ## SEO
 
 The app includes:
-- Metadata in `app/layout.js`
-- Structured data (Person schema) in `app/page.js`
+- Locale-specific metadata and reciprocal `hreflang` links
+- One shared Person entity and stable JSON-LD `@id`
 - `app/robots.js`
 - `app/sitemap.js`
 

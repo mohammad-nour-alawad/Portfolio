@@ -1,0 +1,41 @@
+[
+  {
+    "degree": "Аспирантура",
+    "institution": "ITMO University",
+    "field": "Адаптивное взаимодействие человека и ИИ на основе агентных систем",
+    "year": "окончание в 2028 году",
+    "description": "Исследую адаптивные LLM и агентные системы, уделяя основное внимание программным агентам, контексту и памяти, персонализации, рассуждениям на уровне репозитория и взаимодействию человека и ИИ.",
+    "link": "https://en.itmo.ru/en/faculty/114/fakultet_cifrovyh_transformaciy.htm",
+    "linkLabel": "Факультет технологий искусственного интеллекта"
+  },
+  {
+    "degree": "Магистратура",
+    "institution": "ITMO University",
+    "field": "Большие данные и машинное обучение",
+    "year": "2025",
+    "description": "Окончил международную программу Big Data and Machine Learning со средним баллом 5/5, заняв первое место на курсе и получив красный диплом. Обучение сочетало машинное обучение, обработку больших объемов данных и исследования разработки ПО с помощью ИИ.",
+    "link": "https://en.itmo.ru/en/viewjep/2/5/Big_Data_and_Machine_Learning.htm",
+    "linkLabel": "Программа Big Data and Machine Learning в ITMO"
+  },
+  {
+    "degree": "Бакалавриат",
+    "institution": "Higher Institute of Applied Sciences and Technology",
+    "field": "Программная инженерия",
+    "year": "2022",
+    "description": "Изучал программную инженерию с фундаментальной подготовкой по алгоритмам, системам, информатике и прикладной инженерии. Окончил институт первым в выпуске с показателем отличия 86,17%.",
+    "link": "https://hiast.edu.sy/en/software_engineering_artificial_intelligence_program",
+    "linkLabel": "Higher Institute for Applied Sciences and Technology",
+    "image": "assets/1748914545968.jpeg",
+    "imageAlt": "Место в рейтинге во время учебы в HIAST",
+    "imageCaption": "Место в рейтинге во время учебы в HIAST"
+  },
+  {
+    "degree": "Национальный центр для одаренных",
+    "institution": "Distinguished Individuals Program",
+    "field": "Программа для одаренных учащихся",
+    "year": "2017",
+    "description": "Окончил сирийскую конкурсную программу среднего образования для учащихся с высокими достижениями, ориентированную на математику, естественные науки, решение задач, самостоятельное обучение и исследовательский подход.",
+    "link": "http://ncd.sy",
+    "linkLabel": "Национальный центр для одаренных"
+  }
+]

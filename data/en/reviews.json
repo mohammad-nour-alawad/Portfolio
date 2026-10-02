@@ -1,0 +1,14 @@
+[
+  {
+    "activity": "Peer Reviewer",
+    "venue": "EMNLP (Conference Reviewing)",
+    "year": "Not specified",
+    "summary": "Contributed as a paper reviewer, evaluating submissions in NLP and LLM-related topics."
+  },
+  {
+    "activity": "Master's Student Supervision",
+    "venue": "ITMO University",
+    "year": "Ongoing",
+    "summary": "Supervising master's students working on coding agents, context and memory, model routing, RAG, and agent evaluation."
+  }
+]

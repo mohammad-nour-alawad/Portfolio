@@ -1,11 +1,13 @@
 export const dynamic = "force-static";
 
+import { absoluteLocaleUrl, localeAlternates } from "@/app/lib/site";
+
 export default function sitemap() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
-  return [
-    {
-      url: siteUrl,
-      lastModified: "2026-03-08"
-    }
-  ];
+  const alternates = { languages: localeAlternates() };
+
+  return ["en", "ar", "ru"].map((locale) => ({
+    url: absoluteLocaleUrl(locale),
+    lastModified: "2026-10-02",
+    alternates
+  }));
 }

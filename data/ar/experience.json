@@ -1,0 +1,285 @@
+[
+  {
+    "featured": true,
+    "role": "مهندس تعلم آلي",
+    "company": "ITMO University",
+    "location": "سانت بطرسبرغ، روسيا",
+    "period": "مارس 2024 - حتى الآن",
+    "summary": "أجري بحوثًا تطبيقية حول التعاون بين الإنسان والذكاء الاصطناعي، وأدوات المطورين القائمة على الذكاء الاصطناعي، والتخصيص؛ بدءًا من توجيه البحث ومعمارية الأنظمة وتنسيق النماذج، وصولًا إلى التجارب والمنشورات. يشمل عملي التطبيقي نشر نماذج LLM، وخدمات الخلفية، وبيئات Docker/Linux، وإدارة Linux، وسير عمل MLOps.",
+    "techStack": [
+      "Python",
+      "Coding Agents",
+      "LLM Systems",
+      "vLLM",
+      "LangGraph",
+      "FastAPI",
+      "Django",
+      "TypeScript",
+      "Docker",
+      "Linux",
+      "MLOps",
+      "RAG",
+      "Knowledge Graphs",
+      "Neo4j",
+      "Playwright"
+    ],
+    "technicalCapabilities": [
+      {
+        "title": "الذكاء الاصطناعي الوكيل وأنظمة LLM",
+        "description": "معمارية وكلاء البرمجة، وتنسيق نماذج متعددة، والسياق والذاكرة التكيفية، والاستدلال بالرسوم البيانية المعرفية، وRAG، ومسارات التقييم، وخدمة النماذج عبر vLLM.",
+        "items": [
+          "Coding Agents",
+          "LLM Systems",
+          "LangGraph",
+          "vLLM",
+          "RAG",
+          "Knowledge Graphs",
+          "Neo4j"
+        ]
+      },
+      {
+        "title": "منصات الذكاء الاصطناعي وهندسة الخلفية",
+        "description": "خدمات Python، وواجهات FastAPI وDjango، وتكاملات المحررات عبر TypeScript، وأتمتة Git/GitHub، والعمّال، والتحليلات، وسير عمل المنتجات المدعوم بقواعد البيانات.",
+        "items": [
+          "Python",
+          "FastAPI",
+          "Django",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": "البنية التحتية والتقييم والتسليم",
+        "description": "بيئات Docker وLinux، وإدارة Linux، وMLOps، والتنفيذ المعزول، وأتمتة المتصفح، وبنية تجريبية قابلة لإعادة الإنتاج.",
+        "items": [
+          "Docker",
+          "Linux",
+          "MLOps",
+          "Playwright"
+        ]
+      }
+    ],
+    "highlights": [],
+    "focusAreas": [
+      {
+        "title": "نمذجة سلوك المطورين والتخصيص",
+        "description": "قدت بحوث الذكاء السلوكي لهندسة البرمجيات المدعومة بالذكاء الاصطناعي، وطوّرت أساليب لاستنتاج نية المطور، وأنماط استخدام الذكاء الاصطناعي، وعادات سير العمل، والمهام المتكررة من أدلة المستودعات والتفاعلات. وقد نتج عن هذا العمل بحثان علميان."
+      },
+      {
+        "title": "مساعدة برمجية تكيفية عبر LLM",
+        "description": "قدت تصميم وتقييم مساعدة المطور المدركة للسياق، بما يشمل الاستدعاء التكيفي، وتوقيت الاقتراحات، وتصفية المخرجات، والدعم السياقي، وخدمة نماذج LLM متعددة لإكمال الشيفرة والمحادثة والمساعدة المدركة للمستودع. وأسهم هذا العمل في بحثين علميين."
+      },
+      {
+        "title": "ITMO Code — منصة تعليمية للذكاء الاصطناعي",
+        "description": "حوّلت إضافة Roo-Code مفتوحة المصدر إلى ITMO Code، وهي منصة تطوير متكاملة بالذكاء الاصطناعي للتعليم. صمّمت ونفّذت مساعدة ذكاء اصطناعي داخل المحرر، وتنسيق سير العمل حسب الأدوار، وأتمتة Git/GitHub، والتنفيذ المعزول، ومراجعة الشيفرة بالوكلاء، وواجهات الخلفية، وطبقة قواعد بيانات، وعمّالًا، وتحليلات، ومسارات مؤتمتة."
+      },
+      {
+        "title": "الأنظمة الوكيلة وتقييمها",
+        "description": "أجريت بحوثًا حول وكلاء البرمجة المستندين إلى المستودعات، وتحديد مواضع المشكلات، وإصلاح البرمجيات على مستوى المستودع، وتقييم الوكلاء، والمسارات المدركة لمراحل العمل. وقيّمت كيفية توزيع جهد النموذج بين الاستكشاف وتحديد الموضع والإصلاح والتحقق، بما يرتبط مباشرةً بمسار الدكتوراه في التعاون التكيفي بين الإنسان والذكاء الاصطناعي عبر الأنظمة الوكيلة."
+      },
+      {
+        "title": "البيانات متعددة الوسائط ووكلاء الويب",
+        "description": "طوّرت أنظمة وكيلة لتحليل البيانات بالمحادثة وأتمتة المتصفح، تشمل التنفيذ المعزول، وتنسيق الوكلاء، والاستدلال متعدد الخطوات، والتصور البياني، والتفاعل متعدد الوسائط."
+      }
+    ],
+    "metricsTitle": "حجم بيانات البحث",
+    "metricsDescription": "سجلات المستودعات وتفاعلات المطورين المستخدمة في أبحاثي حول سلوك المطورين والتخصيص وهندسة البرمجيات المدعومة بالذكاء الاصطناعي. تلخّص هذه الأرقام نطاق مجموعات البيانات البحثية.",
+    "metrics": [
+      {
+        "value": "1.47M+",
+        "label": "الأحداث"
+      },
+      {
+        "value": "521K+",
+        "label": "عمليات commit"
+      },
+      {
+        "value": "123K+",
+        "label": "طلبات السحب"
+      },
+      {
+        "value": "220K+",
+        "label": "تعليقات مراجعة PR"
+      },
+      {
+        "value": "228K+",
+        "label": "مراجعات PR"
+      },
+      {
+        "value": "40K+",
+        "label": "المطورون"
+      }
+    ],
+    "galleries": [
+      {
+        "title": "البحث والهندسة في ITMO",
+        "images": [
+          {
+            "src": "assets/pics_itmo/itmo-1.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 1"
+          },
+          {
+            "src": "assets/pics_itmo/itmo-2.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 2"
+          },
+          {
+            "src": "assets/pics_itmo/itmo-3.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 3"
+          },
+          {
+            "src": "assets/pics_itmo/itmo-4.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 4"
+          },
+          {
+            "src": "assets/pics_itmo/itmo-5.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 5"
+          },
+          {
+            "src": "assets/pics_itmo/itmo-6.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 6"
+          },
+          {
+            "src": "assets/pics_itmo/itmo-7.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 7"
+          },
+          {
+            "src": "assets/pics_itmo/itmo-8.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 8"
+          },
+          {
+            "src": "assets/pics_itmo/itmo-9.jpeg",
+            "alt": "لقطة من البحث والهندسة في ITMO رقم 9"
+          }
+        ]
+      },
+      {
+        "title": "Huawei Lake Baikal Summit 2026",
+        "description": "شاركت بملصق بحثي وعرض عملي يمثّلان عملي على وكلاء برمجة بالذكاء الاصطناعي مخصّصة للمطورين.",
+        "images": [
+          {
+            "src": "assets/pics_itmo/huawei-summit-2026-1.JPEG",
+            "alt": "عرض ملصقي البحثي في Huawei Lake Baikal Summit 2026"
+          },
+          {
+            "src": "assets/pics_itmo/huawei-summit-2026-2.JPG",
+            "alt": "العرض العملي في Huawei Lake Baikal Summit 2026"
+          }
+        ]
+      }
+    ],
+    "demos": [
+      {
+        "name": "العرض 1",
+        "url": "https://www.youtube.com/watch?v=u90Vz1ZboQg"
+      },
+      {
+        "name": "العرض 2",
+        "url": "https://www.youtube.com/watch?v=IOKSY575hRc"
+      }
+    ]
+  },
+  {
+    "role": "مهندس برمجيات",
+    "company": "ViShare Technology",
+    "location": "الصين",
+    "period": "يونيو 2023 - أبريل 2024",
+    "summary": "ساهمت في منتجات بث الفيديو اللاسلكي مع التركيز على التحسين وأتمتة الاختبارات وموثوقية التكامل.",
+    "techStack": [
+      "C/C++",
+      "Vitis HLS",
+      "Profiling",
+      "Automation",
+      "Embedded Video Systems"
+    ],
+    "highlights": [
+      "دمجت حلول الفريق في منتجات بث الفيديو اللاسلكي.",
+      "نمذجت الخوارزميات وحسّنتها لرفع الأداء والموثوقية.",
+      "طوّرت أدوات تحليل أداء حسّنت السرعة بمقدار 10 أضعاف.",
+      "أتمتُّ سير عمل الاختبارات ونقلت عمليات التركيب عالي المستوى باستخدام Vitis HLS."
+    ],
+    "galleryTitle": "ألبوم العمل في ViShare",
+    "galleryFolder": "assets/pics_vishare",
+    "gallery": []
+  },
+  {
+    "role": "باحث في تعلم الآلة",
+    "company": "Higher Institute for Applied Sciences and Technology",
+    "location": "سوريا",
+    "period": "يناير 2022 - سبتمبر 2022",
+    "summary": "قدت البحث والتطوير التطبيقي في الرؤية الحاسوبية للنشر على أجهزة طرفية ضمن سياقات المراقبة.",
+    "techStack": [
+      "Python",
+      "Computer Vision",
+      "Edge AI",
+      "NPU Deployment",
+      "Flutter"
+    ],
+    "highlights": [
+      "قدت التطوير الكامل لنظام تعرّف على لوحات المركبات.",
+      "رفعت دقة النموذج من 68% إلى 79%.",
+      "نشرت تطبيقات كشف على أجهزة طرفية مزوّدة بوحدات NPU مع دعم كاميرات IP.",
+      "طوّرت تطبيق Flutter للمراقبة المباشرة وتصفّح الأرشيف."
+    ],
+    "galleryTitle": "ألبوم مشروع HIAST",
+    "galleryFolder": "assets/pics_hiast",
+    "gallery": [
+      {
+        "src": "assets/pics_hiast/1704879326265.jpeg",
+        "alt": "لقطة من العمل في HIAST رقم 1",
+        "caption": "لقطة من مشروع HIAST رقم 1"
+      },
+      {
+        "src": "assets/pics_hiast/1704879351147.jpeg",
+        "alt": "لقطة من العمل في HIAST رقم 2",
+        "caption": "لقطة من مشروع HIAST رقم 2"
+      },
+      {
+        "src": "assets/pics_hiast/1704879368706.jpeg",
+        "alt": "لقطة من العمل في HIAST رقم 3",
+        "caption": "لقطة من مشروع HIAST رقم 3"
+      }
+    ],
+    "demos": [
+      {
+        "name": "عرض",
+        "url": "https://youtu.be/NBYmAIW1dEA"
+      }
+    ]
+  },
+  {
+    "role": "مدرّب",
+    "company": "ICPC - International Collegiate Programming Contest",
+    "location": "دولي",
+    "period": "سبتمبر 2019 - يوليو 2022",
+    "summary": "أرشدت فرقًا في الخوارزميات واستراتيجيات المسابقات، مع تركيز كبير على الاستمرارية والتطور.",
+    "techStack": [
+      "Algorithms",
+      "Data Structures",
+      "C++",
+      "Problem Solving",
+      "Team Coaching"
+    ],
+    "highlights": [
+      "درّبت الطلاب وأرشدتهم في الخوارزميات وهياكل البيانات والبرمجة.",
+      "حصلت على Extreme Programmers Award وSteadfast Gurus Award."
+    ],
+    "galleryTitle": "ألبوم التدريب في ICPC",
+    "galleryFolder": "assets/pics_icpc",
+    "gallery": [
+      {
+        "src": "assets/pics_icpc/Screenshot 2026-02-09 224510.png",
+        "alt": "لقطة من التدريب في ICPC رقم 1",
+        "caption": "لقطة من مشروع ICPC رقم 1"
+      },
+      {
+        "src": "assets/pics_icpc/Screenshot 2026-02-09 230655.png",
+        "alt": "لقطة من التدريب في ICPC رقم 2",
+        "caption": "لقطة من مشروع ICPC رقم 2"
+      },
+      {
+        "src": "assets/pics_icpc/Screenshot 2026-02-09 230738.png",
+        "alt": "لقطة من التدريب في ICPC رقم 3",
+        "caption": "لقطة من مشروع ICPC رقم 3"
+      }
+    ]
+  }
+]

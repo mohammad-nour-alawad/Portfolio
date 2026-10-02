@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "title": "Mohammad Nour Al Awad | Researcher & Machine Learning Engineer",
+    "description": "Researcher, Machine Learning Engineer, and PhD student working on adaptive Human-AI collaboration, coding agents, and developer personalization.",
+    "ogTitle": "Mohammad Nour Al Awad | Portfolio",
+    "ogDescription": "Adaptive Human-AI collaboration, coding agents, developer personalization, and efficient LLM systems.",
+    "siteName": "Mohammad Nour Al Awad Portfolio"
+  },
+  "navAria": "Main sections",
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "research": "Research",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "languageSwitcher": "Choose language",
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme"
+  },
+  "actions": {
+    "viewCv": "View CV",
+    "scholar": "Scholar",
+    "paper": "Paper",
+    "presentation": "Presentation",
+    "programWebsite": "Program website",
+    "demo": "Demo"
+  },
+  "image": {
+    "open": "Open image",
+    "expand": "Click to expand",
+    "close": "Close image viewer",
+    "dialog": "Expanded image"
+  },
+  "sections": {
+    "selectedPublications": "Selected publications",
+    "research": "Research",
+    "publication": "Publication",
+    "academicActivity": "Academic activity",
+    "researchEngineering": "Research + engineering",
+    "experience": "Experience",
+    "currentRole": "Current role",
+    "researchAreas": "Research and engineering areas",
+    "scale": "Scale",
+    "datasetDetails": "Research dataset details",
+    "gallery": "Gallery",
+    "technicalCapabilities": "Technical capabilities",
+    "technicalCapabilitiesIntro": "End-to-end work spanning research prototypes, production-oriented AI platforms, model serving, evaluation infrastructure, and deployment.",
+    "selectedDemos": "Selected demos",
+    "earlierRoles": "Earlier roles",
+    "details": "details",
+    "academicBackground": "Academic background",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "contact": {
+    "intro": "If you are hiring, collaborating, or discussing research, email is the fastest channel.",
+    "email": "Contact via Email"
+  },
+  "counter": {
+    "label": "Visits",
+    "alt": "Portfolio visit count"
+  }
+}
