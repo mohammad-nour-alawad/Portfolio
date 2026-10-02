@@ -23,6 +23,9 @@ export function createLocaleMetadata(locale) {
     metadataBase: new URL(`${siteUrl}/`),
     title: ui.metadata.title,
     description: ui.metadata.description,
+    verification: {
+      google: "Fr0SRIU0Z73_y8ojvKchxMY03dSVa7gCzh7HD8g0TVA"
+    },
     keywords: [
       "Mohammad Nour Al Awad",
       "محمد نور العوض",

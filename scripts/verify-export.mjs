@@ -14,6 +14,8 @@ const titles = [];
 const descriptions = [];
 for (const route of routes) {
   const html = await readFile(route.file, "utf8");
+  const head = html.match(/<head>([\s\S]*?)<\/head>/)?.[1] || "";
+  assert.ok(head.includes('<meta name="google-site-verification" content="Fr0SRIU0Z73_y8ojvKchxMY03dSVa7gCzh7HD8g0TVA"/>'), `${route.file}: missing Google site verification in head`);
   assert.match(html, new RegExp(`<html[^>]*lang="${route.locale}"[^>]*dir="${route.dir}"`), `${route.file}: incorrect lang or dir`);
   assert.ok(html.includes(`rel="canonical" href="${route.canonical}"`), `${route.file}: incorrect canonical`);
   assert.ok(html.includes(`property="og:locale" content="${route.ogLocale}"`), `${route.file}: incorrect Open Graph locale`);

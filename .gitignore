@@ -4,3 +4,8 @@ out
 .archive
 npm-debug.log*
 public/assets/cv-mohammad-nour-al-awad.pdf
+
+# BEGIN AGENT PROFILE PRIVATE FILES
+/.codex/config.toml
+/.codex/personalization.md
+# END AGENT PROFILE PRIVATE FILES
