@@ -262,9 +262,69 @@
       "درّبت الطلاب وأرشدتهم في الخوارزميات وهياكل البيانات والبرمجة.",
       "حصلت على Extreme Programmers Award وSteadfast Gurus Award."
     ],
-    "galleryTitle": "ألبوم التدريب في ICPC",
+    "galleryTitle": "ألبوم المسابقات والتدريب في ICPC",
     "galleryFolder": "assets/pics_icpc",
     "gallery": [
+      {
+        "src": "assets/pics_icpc/hiast-svu-awards.png",
+        "alt": "أعضاء الفريق يتسلمون شهادات في مسابقة البرمجة HIAST-SVU",
+        "caption": "تكريم الفريق في مسابقة HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/contest-team-at-work.png",
+        "alt": "فريق في مسابقة البرمجة يتعاون لحل المسائل أمام الحاسوب",
+        "caption": "العمل الجماعي أثناء المسابقة"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-cpc-team.png",
+        "alt": "صورة للفريق تحت لافتة مسابقة البرمجة HIAST CPC",
+        "caption": "صورة الفريق في HIAST CPC"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-contest-portrait.png",
+        "alt": "مشارك يركز خلال مسابقة البرمجة HIAST-SVU",
+        "caption": "لحظة تركيز في HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-at-work.png",
+        "alt": "فريق مسابقة HIAST-SVU يعمل على المسائل أمام الحاسوب",
+        "caption": "حل المسائل في HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team.png",
+        "alt": "صورة للفريق أمام خلفية مسابقة البرمجة HIAST-SVU",
+        "caption": "صورة الفريق في HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2018-team.png",
+        "alt": "الفريق والمدرب في المسابقة البرمجية الجامعية السورية عام 2018",
+        "caption": "صورة الفريق في SCPC 2018"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2019-contest-portrait.png",
+        "alt": "مشارك يرتدي قميص الفريق الأخضر ويركز خلال SCPC 2019",
+        "caption": "أثناء SCPC 2019"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2019-team.png",
+        "alt": "الفريق بقمصان خضراء أمام خلفية مسابقة SCPC 2019",
+        "caption": "صورة الفريق في SCPC 2019"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-celebration.jpg",
+        "alt": "زملاء الفريق في HIAST-SVU يحتفلون بالبالونات ويرفعون أذرعهم",
+        "caption": "احتفال الفريق في HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-with-balloons.jpg",
+        "alt": "فريق HIAST-SVU يحمل بالونات ملونة أمام خلفية المسابقة",
+        "caption": "فريق HIAST-SVU مع بالونات المسابقة"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-selfie.jpg",
+        "alt": "صورة سيلفي للفريق مع البالونات في قاعة مسابقة HIAST-SVU",
+        "caption": "سيلفي الفريق في HIAST-SVU"
+      },
       {
         "src": "assets/pics_icpc/Screenshot 2026-02-09 224510.png",
         "alt": "لقطة من التدريب في ICPC رقم 1",

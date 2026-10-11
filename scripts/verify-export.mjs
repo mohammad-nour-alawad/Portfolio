@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://mohammad-nour-alawad.github.io/Portfolio").replace(/\/$/, "");
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -30,6 +30,19 @@ for (const route of routes) {
   assert.ok(html.includes(`${basePath}/ar/`), `${route.file}: Arabic locale link does not include the expected basePath`);
   assert.ok(html.includes(`${basePath}/ru/`), `${route.file}: Russian locale link does not include the expected basePath`);
   assert.ok(html.includes(`${basePath}/_next/`), `${route.file}: Next.js assets do not include the expected basePath`);
+
+  const experience = JSON.parse(await readFile(`data/${route.locale}/experience.json`, "utf8"));
+  for (const item of experience) {
+    const groups = item.galleries || (item.gallery?.length ? [{ images: item.gallery }] : []);
+    for (const group of groups) {
+      for (const { src } of group.images) {
+        if (/^https?:\/\//.test(src)) continue;
+        const assetPath = src.replace(/^\//, "");
+        assert.ok(html.includes(`src="${basePath}/${assetPath}"`), `${route.file}: gallery image ${src} is not rendered with the expected basePath`);
+        await access(`out/${assetPath}`);
+      }
+    }
+  }
 
   const jsonLdMatch = html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/);
   assert.ok(jsonLdMatch, `${route.file}: missing Person JSON-LD script`);

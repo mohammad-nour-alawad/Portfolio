@@ -262,9 +262,69 @@
       "Обучал студентов алгоритмам, структурам данных и программированию и выступал их наставником.",
       "Получил награды Extreme Programmers Award и Steadfast Gurus Award."
     ],
-    "galleryTitle": "Тренерская работа в ICPC",
+    "galleryTitle": "Соревнования и тренерская работа в ICPC",
     "galleryFolder": "assets/pics_icpc",
     "gallery": [
+      {
+        "src": "assets/pics_icpc/hiast-svu-awards.png",
+        "alt": "Участники команды получают сертификаты на соревновании по программированию HIAST-SVU",
+        "caption": "Награждение на соревновании HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/contest-team-at-work.png",
+        "alt": "Команда совместно решает задачи за компьютером на соревновании по программированию",
+        "caption": "Командная работа во время соревнования"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-cpc-team.png",
+        "alt": "Команда под баннером соревнования по программированию HIAST CPC",
+        "caption": "Командное фото на HIAST CPC"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-contest-portrait.png",
+        "alt": "Сосредоточенный участник соревнования по программированию HIAST-SVU",
+        "caption": "Момент концентрации на HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-at-work.png",
+        "alt": "Команда HIAST-SVU работает над условиями задач за компьютером",
+        "caption": "Решение задач на HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team.png",
+        "alt": "Команда на фоне стенда соревнования по программированию HIAST-SVU",
+        "caption": "Командное фото на HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2018-team.png",
+        "alt": "Команда и тренер на Сирийском студенческом соревновании по программированию 2018 года",
+        "caption": "Командное фото на SCPC 2018"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2019-contest-portrait.png",
+        "alt": "Сосредоточенный участник в зелёной командной футболке на SCPC 2019",
+        "caption": "Во время SCPC 2019"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2019-team.png",
+        "alt": "Команда в зелёных футболках на фоне стенда SCPC 2019",
+        "caption": "Командное фото на SCPC 2019"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-celebration.jpg",
+        "alt": "Участники команды HIAST-SVU празднуют с воздушными шарами, подняв руки",
+        "caption": "Командный праздник на HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-with-balloons.jpg",
+        "alt": "Команда HIAST-SVU с разноцветными воздушными шарами на фоне стенда соревнования",
+        "caption": "Команда HIAST-SVU с воздушными шарами"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-selfie.jpg",
+        "alt": "Командное селфи с воздушными шарами в зале соревнования HIAST-SVU",
+        "caption": "Командное селфи на HIAST-SVU"
+      },
       {
         "src": "assets/pics_icpc/Screenshot 2026-02-09 224510.png",
         "alt": "Тренерская работа в ICPC — снимок 1",

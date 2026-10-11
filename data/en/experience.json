@@ -193,9 +193,69 @@
       "Trained and mentored students in algorithms, data structures, and programming.",
       "Recognized with Extreme Programmers Award and Steadfast Gurus Award."
     ],
-    "galleryTitle": "ICPC Coaching Album",
+    "galleryTitle": "ICPC Contest & Coaching Album",
     "galleryFolder": "assets/pics_icpc",
     "gallery": [
+      {
+        "src": "assets/pics_icpc/hiast-svu-awards.png",
+        "alt": "Team members receiving certificates at the HIAST-SVU programming contest",
+        "caption": "HIAST-SVU contest awards"
+      },
+      {
+        "src": "assets/pics_icpc/contest-team-at-work.png",
+        "alt": "Programming contest team solving problems together at a computer",
+        "caption": "Teamwork during the contest"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-cpc-team.png",
+        "alt": "Team posing beneath the HIAST CPC programming contest banner",
+        "caption": "HIAST CPC team photo"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-contest-portrait.png",
+        "alt": "Contest participant concentrating at the HIAST-SVU programming contest",
+        "caption": "A moment of concentration at HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-at-work.png",
+        "alt": "HIAST-SVU contest team working on problem statements at their computer",
+        "caption": "Solving problems at HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team.png",
+        "alt": "Team posing in front of the HIAST-SVU programming contest backdrop",
+        "caption": "HIAST-SVU team photo"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2018-team.png",
+        "alt": "Team and coach at the 2018 Syrian Collegiate Programming Contest",
+        "caption": "SCPC 2018 team photo"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2019-contest-portrait.png",
+        "alt": "Participant in a green team shirt concentrating at SCPC 2019",
+        "caption": "During SCPC 2019"
+      },
+      {
+        "src": "assets/pics_icpc/scpc-2019-team.png",
+        "alt": "Team in green shirts posing in front of the SCPC 2019 backdrop",
+        "caption": "SCPC 2019 team photo"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-celebration.jpg",
+        "alt": "HIAST-SVU teammates celebrating with balloons and raised arms",
+        "caption": "Celebrating together at HIAST-SVU"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-with-balloons.jpg",
+        "alt": "HIAST-SVU team posing with colorful balloons in front of the contest backdrop",
+        "caption": "HIAST-SVU team with contest balloons"
+      },
+      {
+        "src": "assets/pics_icpc/hiast-svu-team-selfie.jpg",
+        "alt": "Team selfie with balloons in the HIAST-SVU contest auditorium",
+        "caption": "A team selfie at HIAST-SVU"
+      },
       {
         "src": "assets/pics_icpc/Screenshot 2026-02-09 224510.png",
         "alt": "ICPC work snapshot 1",
